@@ -12,10 +12,10 @@ public class Main {
         String[] userInputs = {"Введите число: ", "Введите степень: "};
         float userNumber = InputFloat(iScanner, userInputs[0]);
         int userPower = InputInt(iScanner, userInputs[1]);
-        System.out.printf("Ответ: %.2f", SquareNumber(userNumber, userPower));
+        System.out.printf("Ответ: %.2f", PowerNumber(userNumber, userPower));
     }
 
-    public static float SquareNumber(float someNumber, int power) {
+    public static float PowerNumber(float someNumber, int power) {
         if (power < 0) {
             power = -power;
             someNumber = 1 / someNumber;
@@ -23,7 +23,7 @@ public class Main {
         if (power == 0) {
             return 1;
         }
-        return someNumber * SquareNumber(someNumber, power - 1);
+        return someNumber * PowerNumber(someNumber, power - 1);
     }
 
     public static int InputInt(Scanner iScanner, String text) {
