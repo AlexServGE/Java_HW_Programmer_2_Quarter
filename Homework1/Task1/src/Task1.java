@@ -6,16 +6,17 @@
 
 import java.util.Scanner;
 
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
+        Task1 tk = new Task1();
         Scanner iScanner = new Scanner(System.in);
         String[] userInputs = {"Введите число: ", "Введите степень: "};
-        float userNumber = InputFloat(iScanner, userInputs[0]);
-        int userPower = InputInt(iScanner, userInputs[1]);
-        System.out.printf("Ответ: %.2f", PowerNumber(userNumber, userPower));
+        float userNumber = tk.inputFloat(iScanner, userInputs[0]);
+        int userPower = tk.inputInt(iScanner, userInputs[1]);
+        System.out.printf("Ответ: %.2f", tk.powerNumber(userNumber, userPower));
     }
 
-    public static float PowerNumber(float someNumber, int power) {
+    public float powerNumber(float someNumber, int power) {
         if (power < 0) {
             power = -power;
             someNumber = 1 / someNumber;
@@ -23,15 +24,15 @@ public class Main {
         if (power == 0) {
             return 1;
         }
-        return someNumber * PowerNumber(someNumber, power - 1);
+        return someNumber * powerNumber(someNumber, power - 1);
     }
 
-    public static int InputInt(Scanner iScanner, String text) {
+    public int inputInt(Scanner iScanner, String text) {
         System.out.print(text);
         return iScanner.nextInt();
     }
 
-    public static float InputFloat(Scanner iScanner, String text) {
+    public float inputFloat(Scanner iScanner, String text) {
         System.out.print(text);
         return iScanner.nextFloat();
     }
