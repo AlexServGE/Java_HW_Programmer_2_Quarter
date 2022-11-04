@@ -5,11 +5,11 @@ import java.util.logging.Logger;
 
 public class Task1 {
 
-    // Дана строка sql-запроса "select * from students".
-    // Сформируйте часть WHERE этого запроса, используя StringBuilder.
+    // Р”Р°РЅР° СЃС‚СЂРѕРєР° sql-Р·Р°РїСЂРѕСЃР° "select * from students".
+    // РЎС„РѕСЂРјРёСЂСѓР№С‚Рµ С‡Р°СЃС‚СЊ WHERE СЌС‚РѕРіРѕ Р·Р°РїСЂРѕСЃР°, РёСЃРїРѕР»СЊР·СѓСЏ StringBuilder.
     //
-    // 1) Данные для фильтрации подаются в метод двумя массивами paramName и paramValue.
-    // 2) Данные для фильтрации подаются в метод строкой в формате json.
+    // 1) Р”Р°РЅРЅС‹Рµ РґР»СЏ С„РёР»СЊС‚СЂР°С†РёРё РїРѕРґР°СЋС‚СЃСЏ РІ РјРµС‚РѕРґ РґРІСѓРјСЏ РјР°СЃСЃРёРІР°РјРё paramName Рё paramValue.
+    // 2) Р”Р°РЅРЅС‹Рµ РґР»СЏ С„РёР»СЊС‚СЂР°С†РёРё РїРѕРґР°СЋС‚СЃСЏ РІ РјРµС‚РѕРґ СЃС‚СЂРѕРєРѕР№ РІ С„РѕСЂРјР°С‚Рµ json.
     public static void main(String[] args) throws IOException {
         Task1 tk = new Task1();
         Logger log = Logger.getLogger(Task1.class.getName());
