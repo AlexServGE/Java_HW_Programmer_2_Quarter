@@ -3,22 +3,22 @@ import java.util.*;
 
 public class Main {
 
-    // Пусть дан произвольный список целых чисел
+    // РџСѓСЃС‚СЊ РґР°РЅ РїСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ СЃРїРёСЃРѕРє С†РµР»С‹С… С‡РёСЃРµР»
     public static void main(String[] args) {
         Main task1 = new Main();
         List<Integer> taskList = new ArrayList<>(List.of(task1.arrayRndIntegers(2)));
         System.out.println(taskList);
-        //Метод removeNegativeValue
+        //РњРµС‚РѕРґ removeNegativeValue
         List<Integer> taskList1 = new ArrayList<>(taskList);
         task1.removeNegativeValue(taskList1);
         System.out.println(taskList1);
-        //Метод getMin
+        //РњРµС‚РѕРґ getMin
         List<Integer> taskList2 = new ArrayList<>(taskList);
         System.out.println(task1.getMin(taskList2));
-        //Метод getMax
+        //РњРµС‚РѕРґ getMax
         List<Integer> taskList3 = new ArrayList<>(taskList);
         System.out.println(task1.getMax(taskList3));
-        //Метод getAverage
+        //РњРµС‚РѕРґ getAverage
         List<Integer> taskList4 = new ArrayList<>(taskList);
         System.out.println(task1.getAverage(taskList4));
     }
@@ -34,7 +34,7 @@ public class Main {
     }
 
 
-    // Нужно удалить из него четные числа
+    // РќСѓР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РёР· РЅРµРіРѕ С‡РµС‚РЅС‹Рµ С‡РёСЃР»Р°
     public List<Integer> removeNegativeValue(List<Integer> list) {
         Iterator<Integer> i = list.iterator();
         while (i.hasNext()) {
@@ -43,20 +43,20 @@ public class Main {
         return list;
     }
 
-    // Найти минимальное значение
+    // РќР°Р№С‚Рё РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
     public Integer getMin(List<Integer> list) {
         PriorityQueue<Integer> queue = new PriorityQueue<>(list);
         return queue.peek();
     }
 
-    // Найти максимальное значение
+    // РќР°Р№С‚Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
     public Integer getMax(List<Integer> list) {
 //        Collections.max(list);
         list.sort(Comparator.reverseOrder());
         return list.get(0);
     }
 
-    // Найти среднее значение
+    // РќР°Р№С‚Рё СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ
     public Double getAverage(List<Integer> list) {
         int sum = 0;
         for (int item : list) {
